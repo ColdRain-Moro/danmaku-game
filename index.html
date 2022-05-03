@@ -1,13 +1,43 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <link rel="icon" type="image/svg+xml" href="favicon.svg" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Vite App</title>
-  </head>
-  <body>
+
+<head>
+  <meta charset="UTF-8" />
+  <link rel="icon" type="image/svg+xml" href="favicon.svg" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Vite App</title>
+</head>
+
+<body>
+  <!--准备页面，选择自机-->
+  <div class="state-page" id="prepared" style="display: block;">
+    <h1 style="text-align: center;">选择你的自机</h1>
+    <div class="actor-box">
+      <div class="actor-card">
+        <img class="actor-img" src="./src/assets/Th105Reimu.png" alt="actor" />
+        <h2 class="actor-name">博丽灵梦</h2>
+        <p class="actor-sub-name">楽園の素敵な巫女</p>
+      </div>
+      <div class="actor-card">
+        <img class="actor-img" src="./src/assets/Th105Marisa.png" alt="actor" />
+        <h2 class="actor-name">雾雨魔理沙</h2>
+        <p class="actor-sub-name">普通の魔法使い</p>
+      </div>
+    </div>
+    <div style="display: flex;width: 100%;justify-content: center;margin-top: 20px;">
+      <button id="start">开始游戏</button>
+    </div>
+  </div>
+  <div class="state-page" id="play">
     <canvas width="1024" height="700"></canvas>
-    <script type="module" src="/src/app/main.ts"></script>
-  </body>
+  </div>
+  <div class="state-page" id="failure">
+
+  </div>
+  <div class="state-page" id="victory">
+
+  </div>
+  <script type="module" src="/src/app/main.ts"></script>
+</body>
+
 </html>

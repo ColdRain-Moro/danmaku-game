@@ -4,11 +4,15 @@
 
 ## 思路 & 架构
 
+### 单页App
+
+通过css属性`display: none;`实现简单的单页app功能。
+
 ### 生命周期
 
 游戏从开始到结束经历的生命周期阶段
 
-每一个生命周期阶段会持有对应的数据
+每一个生命周期阶段会持有对应的数据, 并且在合适的时候执行生命周期回调hook`onStart()` `onStop()`
 
 #### Prepared
 
@@ -18,34 +22,17 @@
 
 在该阶段，玩家可以选择自机。
 
-##### LifeCycle Data
-
-~~~typescript
-interface LifeCycleData.Prepared {
-    selected: Actor;
-}
-~~~
-
 #### Play !important
 
 > 游玩阶段
 
 玩家游玩游戏的阶段。
 
-在此阶段，LifeCycleData持有玩家以及全场的敌对生物，并可以从他们的对象中获取全部弹幕，以此渲染游戏画面。
+在此阶段，State持有玩家以及全场的敌对生物，并可以从他们的对象中获取全部弹幕，以此渲染游戏画面。
 
 获取粒子的过程中会进行是否碰撞的判断，如果碰撞会扣除相应的血量。
 
 也许可以做做决死？目前还是先把基础的功能做了吧。
-
-##### LifeCycle Data
-
-~~~typescript
-interface LifeCycleData.Play {
-    enemys: Entity[];
-    player: Player;
-}
-~~~
 
 #### Failure
 

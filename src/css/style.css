@@ -1,5 +1,74 @@
 canvas {
   border: 1px solid black;
-  /* image-rendering: pixelated;
-  image-rendering: crisp-edges; */
+  /* display: none; */
+  margin: 20px 0 20px 0;
 }
+
+body {
+  margin: 0;
+  height: 100%;
+}
+
+html {
+  margin: 0;
+  padding: 0;
+}
+
+.state-page {
+  width: 100%;
+  height: 100%;
+  display: none;
+}
+
+.actor-img {
+  width: 200px;
+  height: auto;
+}
+
+.actor-card {
+  width: fit-content;
+  height: 400px;
+  padding: 20px;
+  box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2);
+  border-radius: 8px;
+  margin: 20px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  transition: .3s all;
+  cursor: pointer;
+  position: relative;
+}
+
+.actor-box {
+  width: 100%;
+  height: fill-available;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+}
+
+.actor-card:hover {
+  transform: translateY(-10px);
+}
+
+.selected {
+  transform: translateY(-10px);
+}
+
+button {
+  padding: 10px 20px;
+  border: none;
+  color: white;
+  font-size: 20px;
+  background-color: #1E88E5;
+  border-radius: 8px;
+  transition: .3s all;
+  cursor: pointer;
+}
+
+button:hover {
+  background-color: #1976D2;
+}
+
