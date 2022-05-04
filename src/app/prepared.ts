@@ -11,7 +11,7 @@ export function initPrepared() {
             card.classList.add("selected");
         })
     })
-    document.querySelector("start")!.addEventListener("click", () => {
+    document.querySelector("#start")!.addEventListener("click", () => {
         currentState.onStop();
     })
     currentState.onStart();

@@ -42,6 +42,11 @@ export interface Play extends State {
      * 画笔
      */
     ctx: CanvasRenderingContext2D;
+
+    /**
+     * 结果
+     */
+    win: boolean;
 }
 
 export interface Failure extends State {

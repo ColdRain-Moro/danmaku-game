@@ -19,6 +19,6 @@ export default interface Particle {
     /**
      * 渲染粒子
      */
-    render?: (ctx: CanvasRenderingContext2D, particle: Particle) => void;
+    render: (canvas: HTMLCanvasElement, ctx: CanvasRenderingContext2D) => void;
     
 }
